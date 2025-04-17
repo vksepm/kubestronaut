@@ -1,0 +1,628 @@
+{
+    "courses": [
+        {
+            "name": "CKA",
+            "description": "Description 1",
+            "sections": [
+                {
+                    "name": "Core Concepts",
+                    "topics": [
+                        "Kubernetes Architecture",
+                        "Docker vs ContainerD",
+                        "etcd",
+                        "API Server",
+                        "Controller Manager",
+                        "Scheduler",
+                        "Kubelet",
+                        "Kube Proxy",
+                        "Kubernetes Extension Interfaces",
+                        "Container Runtime Interface (CRI)",
+                        "Container Storage Interface (CSI)",
+                        "Pods",
+                        "Pods with YAML",
+                        "ReplicaSets",
+                        "Deployments",
+                        "Services",
+                        "Cluster IP",
+                        "Load Balancer",
+                        "Namespaces",
+                        "Imperative vs Declarative",
+                        "Kubectl Apply Command"
+                    ]
+                },
+                {
+                    "name": "Scheduling",
+                    "topics": [
+                        "Manual Scheduling",
+                        "Labels and Selectors",
+                        "Taints and Tolerations",
+                        "Node Selectors",
+                        "Node Affinity",
+                        "Taints and Tolerations vs Node Affinity",
+                        "Resource Quotas & Limits",
+                        "DaemonSets",
+                        "Static Pods",
+                        "Multiple Schedulers",
+                        "Configuring Kubernetes Scheduler Profiles"
+                    ]
+                },
+                {
+                    "name": "Logging & Monitoring",
+                    "topics": [
+                        "Monitor Cluster Components",
+                        "Managing Application/Container Logs"
+                    ]
+                },
+                {
+                    "name": "Application Lifecycle Management",
+                    "topics": [
+                        "Rolling Updates & Rollbacks",
+                        "Commands and Arguments",
+                        "Environment Variables",
+                        "ConfigMaps",
+                        "Secrets",
+                        "Scale Applications",
+                        "Autoscaling",
+                        "Horizontal Pod Autoscaler (HPA)",
+                        "Vertical Pod Autoscaler (VPA)",
+                        "Cluster Autoscaler",
+                        "Event-Driven Autoscaling with KEDA",
+                        "Readiness Probes",
+                        "Liveness Probes",
+                        "Multi Container PODs",
+                        "Multi-container PODs Design Patterns",
+                        "Init Containers"
+                    ]
+                },
+                {
+                    "name": "Cluster Maintenance",
+                    "topics": [
+                        "OS Upgrades",
+                        "Kubernetes Software Versions",
+                        "Cluster Upgrade",
+                        "Backup and Restore Methods",
+                        "ETCDCTL"
+                    ]
+                },
+                {
+                    "name": "Security",
+                    "topics": [
+                        "Kubernetes Security Primitives",
+                        "Authentication",
+                        "TLS Basics",
+                        "TLS in Kubernetes",
+                        "PKI Certificates & API",
+                        "KubeConfig",
+                        "API Groups",
+                        "Authorization",
+                        "Role Based Access Controls (RBAC)",
+                        "Cluster Roles",
+                        "Service Accounts",
+                        "Image Security",
+                        "Security in Docker",
+                        "Security Contexts",
+                        "Network Policies",
+                        "Admission Controllers",
+                        "Validating and Mutating Admission Controllers ",
+                        "Kubectx and Kubens"
+                    ]
+                },
+                {
+                    "name": "Storage",
+                    "topics": [
+                        "Volume Driver Plugins in Docker",
+                        "Docker Storage",
+                        "Volumes",
+                        "Persistent Volumes (PV)",
+                        "Persistent Volume Claims (PVC)",
+                        "Using PVC in Pods",
+                        "Storage Classes",
+                        "Dynamic Volume Provisioning"
+                    ]
+                },
+                {
+                    "name": "Networking",
+                    "topics": [
+                        "Switching, Routing, Gateways CNI in Kubernetes",
+                        "CoreDNS",
+                        "Network Namespaces",
+                        "Container Networking Interface (CNI)",
+                        "Docker Networking",
+                        "Cluster Networking",
+                        "Pod Networking",
+                        "Weave",
+                        "IPAM Weave",
+                        "Ingress",
+                        "The Need for Gateway API",
+                        "Introduction to Gateway API & Resource Model",
+                        "Configure a Gateway Resource",
+                        "Expose a deployment on the Gateway",
+                        "Traffic Switching"
+                    ]
+                },
+                {
+                    "name": "Install",
+                    "topics": [
+                        "Infrastructure Setup",
+                        "Cluster Configuration & Initialization",
+                        "Cluster Security & Management",
+                        "Core Services & Tools",
+                        "Testing & Validation",
+                        "Advanced Setup - Deploy with Kubeadm",
+                        "ETCD in HA",
+                        "Helm Overview",
+                        "Helm Installation",
+                        "Helm Concepts",
+                        "Kustomize Overview",
+                        "Kustomize vs Helm",
+                        "Kustomize Installation",
+                        "Kustomize.yaml file",
+                        "Kustomize Output",
+                        "Kustomize ApiVersion & Kind",
+                        "Managing Directories with Kustomize",
+                        "Common Kustomize Transformers",
+                        "Kustomize Patches",
+                        "Kustomize Different Types of Patches",
+                        "Kustomize Patches List",
+                        "Kustomize Patches Dictionary",
+                        "Kustomize Overlays",
+                        "Kustomize Components",
+                        "Custom Resource Definition (CRD)",
+                        "Operator Framework"
+                    ]
+                },
+                {
+                    "name": "Troubleshooting",
+                    "topics": [
+                        "Application Failure",
+                        "Control Plane Failure",
+                        "Worker Node Failure",
+                        "Troubleshoot Services and Networking",
+                        "Common Networking Issues",
+                        "Troubleshooting the API Server, Scheduler",
+                        "Network Troubleshooting"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "CKAD",
+            "description": "Description 2",
+            "sections": [
+                {
+                    "name": "Core Concepts",
+                    "topics": [
+                        "Docker vs ContainerD",
+                        "Pods",
+                        "ReplicaSets",
+                        "Deployments",
+                        "Namespaces",
+                        "Imperative Commands"
+                    ]
+                },
+                {
+                    "name": "Configuration",
+                    "topics": [
+                        "Docker Images",
+                        "Commands and Arguments",
+                        "Environment Variables",
+                        "ConfigMaps",
+                        "Secrets",
+                        "Security Contexts",
+                        "Resource Quotas & Limits",
+                        "Service Accounts",
+                        "Taints and Tolerations",
+                        "Node Selectors",
+                        "Node Affinity"
+                    ]
+                },
+                {
+                    "name": "Multi-Container Pods",
+                    "topics": [
+                        "Multi Container PODs",
+                        "init Containers"
+                    ]
+                },
+                {
+                    "name": "Observability",
+                    "topics": [
+                        "Readiness Probes",
+                        "Liveness Probes",
+                        "Managing Application/Container Logs",
+                        "Monitor Cluster Components"
+                    ]
+                },
+                {
+                    "name": "Pod Design",
+                    "topics": [
+                        "Labels and Selectors",
+                        "Rolling Updates & Rollbacks",
+                        "Deployment Strategy - Blue Green",
+                        "Deployment Strategy - Canary",
+                        "Kustomize Overview",
+                        "Kustomize vs Helm",
+                        "Kustomize Installation",
+                        "Kustomize Overlays",
+                        "Kustomize Components",
+                        "Jobs",
+                        "Cron Jobs"
+                    ]
+                },
+                {
+                    "name": "Services & Networking",
+                    "topics": [
+                        "Services",
+                        "Network Policies",
+                        "Ingress"
+                    ]
+                },
+                {
+                    "name": "State Persistence",
+                    "topics": [
+                        "Volume Driver Plugins in Docker",
+                        "Persistent Volumes (PV)",
+                        "Persistent Volume Claims (PVC)s",
+                        "Storage Classes",
+                        "Stateful Sets",
+                        "Headless Services"
+                    ]
+                },
+                {
+                    "name": "Security",
+                    "topics": [
+                        "Authentication",
+                        "KubeConfig",
+                        "API Groups",
+                        "Authorization",
+                        "Role Based Access Controls (RBAC)",
+                        "Cluster Roles",
+                        "Admission Controllers",
+                        "API Versions/Deprecations",
+                        "Custom Resource Definition (CRD)",
+                        "Custom Controllers",
+                        "Operator Framework"
+                    ]
+                },
+                {
+                    "name": "Helm",
+                    "topics": [
+                        "Helm Overview",
+                        "Install Helm",
+                        "Helm Charts",
+                        "Helm Components",
+                        "Customizing Helm Chart Params",
+                        "Lifecycle Management with Helm"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "KCNA",
+            "description": "Description 4",
+            "sections": [
+                {
+                    "name": "Kubernetes Fundamentals",
+                    "topics": [
+                        "What is Cloud Native?",
+                        "What are Containers?",
+                        "Container Orchestration",
+                        "Kubernetes Architecture",
+                        "Container Runtime Interface (CRI)",
+                        "Docker vs ContainerD"
+                    ]
+                },
+                {
+                    "name": "Kubernetes Resources",
+                    "topics": [
+                        "Pods",
+                        "ReplicaSets",
+                        "Deployments",
+                        "Rolling Updates & Rollbacks",
+                        "Imperative vs Declarative",
+                        "Kubectl Apply Command",
+                        "Namespaces"
+                    ]
+                },
+                {
+                    "name": "Scheduling",
+                    "topics": [
+                        "Manual Scheduling",
+                        "Labels and Selectors",
+                        "Taints and Tolerations",
+                        "Node Selectors",
+                        "Node Affinity",
+                        "Taints and Tolerations vs Node Affinity",
+                        "Resource Quotas & Limits",
+                        "DaemonSets",
+                        "Static Pods",
+                        "Multiple Schedulers",
+                        "Configuring Kubernetes Scheduler Profiles"
+                    ]
+                },
+                {
+                    "name": "Security",
+                    "topics": [
+                        "Kubernetes Security Primitives",
+                        "Authentication",
+                        "KubeConfig",
+                        "API Groups",
+                        "Authorization",
+                        "Role Based Access Controls (RBAC)",
+                        "Cluster Roles",
+                        "Service Accounts",
+                        "Image Security",
+                        "Security Contexts",
+                        "Network Policies"
+                    ]
+                },
+                {
+                    "name": "Networking",
+                    "topics": [
+                        "Cluster Networking",
+                        "Pod Networking",
+                        "Container Networking Interface (CNI)",
+                        "Weave",
+                        "DNS",
+                        "Ingress"
+                    ]
+                },
+                {
+                    "name": "Service Mesh",
+                    "topics": [
+                        "Services",
+                        "Sidecars",
+                        "Envoy",
+                        "Monoliths & Microservices",
+                        "Istio"
+                    ]
+                },
+                {
+                    "name": "Storage",
+                    "topics": [
+                        "Storage",
+                        "Docker Storage",
+                        "Volume Driver Plugins in Docker",
+                        "Container Storage Interface (CSI)",
+                        "Volumes",
+                        "Persistent Volumes (PV)",
+                        "Persistent Volume Claims (PVC)",
+                        "Storage Classes"
+                    ]
+                },
+                {
+                    "name": "Cloud Native Architecture",
+                    "topics": [
+                        "Autoscaling",
+                        "Horizontal Pod Autoscaler (HPA)",
+                        "Vertical Pod Autoscaler (VPA)",
+                        "Serverless",
+                        "Kubernetes Enhancement Proposal (KEP)",
+                        "Kubernetes Special Interest Groups (SIG)",
+                        "Open Standards"
+                    ]
+                },
+                {
+                    "name": "Cloud Native Observability",
+                    "topics": [
+                        "Falco",
+                        "SLO/SLA/SLI",
+                        "Prometheus",
+                        "Cost Management"
+                    ]
+                },
+                {
+                    "name": "Cloud Native Application Delivery",
+                    "topics": [
+                        "Application Delivery Fundamentals",
+                        "GitOps",
+                        "Push vs Pull-based Deployments",
+                        "CI/CD with GitOps",
+                        "ArgoCD"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "CKS",
+            "description": "Description 3",
+            "sections": [
+                {
+                    "name": "Understanding the Kubernetes Attack Surface",
+                    "topics": [
+                        "The 4Cs of Cloud Native Security"
+                    ]
+                },
+                {
+                    "name": "Cluster Setup and Hardening",
+                    "topics": [
+                        "CIS benchmarks",
+                        "Kube-bench",
+                        "Kubernetes Security Primitives",
+                        "Authentication",
+                        "Service Accounts",
+                        "TLS in Kubernetes",
+                        "PKI Certificates & API",
+                        "KubeConfig",
+                        "API Groups",
+                        "Authorization",
+                        "Role Based Access Controls (RBAC)",
+                        "Cluster Roles",
+                        "Attribute Based Access Control (ABAC)",
+                        "Kubelet Security",
+                        "Kubectl Proxy & Port Forward",
+                        "Kubernetes Dashboard",
+                        "Verify platform binaries before deploying",
+                        "Update Kubernetes frequently",
+                        "Kubernetes Software Versions",
+                        "Cluster Upgrade",
+                        "Network Policies",
+                        "Ingress",
+                        "Docker Service Configuration",
+                        "Docker - Securing the Daemon",
+                        "Securing Node Metadata",
+                        "Protection Strategies",
+                        "Endpoint Security",
+                        "Audit Logging"
+                    ]
+                },
+                {
+                    "name": "System Hardening",
+                    "topics": [
+                        "Least Privilege Principle",
+                        "Minimize host OS footprint",
+                        "Limit Node Access",
+                        "SSH Hardening",
+                        "Privilege Escalation",
+                        "Remove Obsolete Packages and Services",
+                        "Restrict Kernel Modules",
+                        "Identify and Disable Open Ports",
+                        "Minimize IAM roles",
+                        "Minimize external access to the network",
+                        "UFW Firewall Basics",
+                        "Linux Syscalls",
+                        "AquaSec Tracee",
+                        "Restrict syscalls using seccomp",
+                        "Implement Seccomp in Kubernetes",
+                        "AppArmor",
+                        "Linux Capabiliies",
+                        "SELinux Basics"
+                    ]
+                },
+                {
+                    "name": "Minimize Microservice Vulnerabilities",
+                    "topics": [
+                        "Security Contexts",
+                        "Admission Controllers",
+                        "Pod Security",
+                        "Open Policy Agent (OPA)",
+                        "Secrets",
+                        "Container Sandboxing",
+                        "gVisor",
+                        "kata Containers",
+                        "Runtime Classes",
+                        "Container Runtime Interface (CRI)",
+                        "mTLS",
+                        "Multi-Tenancy",
+                        "Control Plane Isolation​",
+                        "Namespaces",
+                        "Resource Quotas & Limits",
+                        "Storage",
+                        "Taints and Tolerations",
+                        "API Priority & Fairness",
+                        "Quality of Service",
+                        "Cilium"
+                    ]
+                },
+                {
+                    "name": "Supply Chain Security",
+                    "topics": [
+                        "SBOM",
+                        "KubeLinter",
+                        "Minimize base image footprint",
+                        "Image Security",
+                        "ImagePolicyWebhookk",
+                        "Sign and Validate Images",
+                        "Use static analysis of user workloads",
+                        "Scan images for known vulnerabilities (Trivy)",
+                        "Artifact Repository Security"
+                    ]
+                },
+                {
+                    "name": "Monitoring, Logging and Runtime Security",
+                    "topics": [
+                        "Perform behavioral analytics of syscall process",
+                        "Falco",
+                        "Detect threats across infrastructure, apps, networks, data, users, and workloads.",
+                        "Detect all attack phases, regardless of location or spread.",
+                        "Conduct deep analysis to identify bad actors in the environment.",
+                        "Mutable vs Immutable Infrastructure"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "KCSA",
+            "description": "Description 5",
+            "sections": [
+                {
+                    "name": "Overview of Cloud Native Security",
+                    "topics": [
+                        "The 4Cs of Cloud Native Security",
+                        "Cloud Provider Security",
+                        "Infrastructure Security",
+                        "Kubernetes Isolation Techniques",
+                        "Artifact Repository Security",
+                        "Image Security",
+                        "Workload and Application Code Security"
+                    ]
+                },
+                {
+                    "name": "Kubernetes Cluster Component Security",
+                    "topics": [
+                        "API Server",
+                        "Controller Manager",
+                        "Scheduler",
+                        "Kubelet Security",
+                        "Container Runtime Interface (CRI)",
+                        "Kube Proxy",
+                        "etcd",
+                        "Container Networking",
+                        "Kubectl Proxy & Port Forward",
+                        "KubeConfig",
+                        "Storage"
+                    ]
+                },
+                {
+                    "name": "Kubernetes Security Fundamentals",
+                    "topics": [
+                        "Pod Security",
+                        "Authentication",
+                        "Authorization",
+                        "Role Based Access Controls (RBAC)",
+                        "Secrets",
+                        "Namespaces",
+                        "Resource Quotas & Limits",
+                        "Security Contexts",
+                        "Audit Logging",
+                        "Network Policies"
+                    ]
+                },
+                {
+                    "name": "Kubernetes Threat Model",
+                    "topics": [
+                        "Trust Boundaries and Data Flow",
+                        "Persistence",
+                        "Denial of Service (DoS)",
+                        "Malicious Code Execution",
+                        "Compromised Applications in Containers",
+                        "Attacker on the Network",
+                        "Access to Sensitive Data",
+                        "Privilege Escalation"
+                    ]
+                },
+                {
+                    "name": "Platform Security",
+                    "topics": [
+                        "Minimize base image footprint",
+                        "Scan images for known vulnerabilities (Trivy)",
+                        "Falco",
+                        "Istio",
+                        "PKI Certificates & API",
+                        "TLS in Kubernetes",
+                        "mTLS",
+                        "Admission Controllers"
+                    ]
+                },
+                {
+                    "name": "Compliance and Security Frameworks",
+                    "topics": [
+                        "Compliance Frameworks",
+                        "Threat Modelling Frameworks",
+                        "Supply Chain Compliance",
+                        "Automation and Tooling"
+                    ]
+                }
+            ]
+        }
+    ]
+}

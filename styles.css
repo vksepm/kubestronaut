@@ -1,0 +1,316 @@
+/* Base styles */
+body {
+    background-color: #0a0a0a;
+}
+
+/* Layout */
+.container {
+    margin: 0 auto;
+}
+
+/* Course cards */
+.course-card {
+    position: relative;
+    max-width: 250px;
+    width: 100%;
+    background-color: #121212;
+    border: 1px solid #262626;
+    border-radius: 0.5rem;
+    padding-top: 1.5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Course title */
+.course-title {
+    color: #326CE5;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+/* Sections */
+.section-container {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.section-container:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #9ca3af;
+}
+
+/* Topics */
+.topic-box {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    color: #9ca3af;
+    position: relative;
+    z-index: 0;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.topic-box:hover {
+    background-color: #1a1a1a;
+    color: #e5e7eb;
+}
+
+/* Completion percentage */
+.completion-percentage {
+    position: absolute;
+    top: -2.5rem;
+    left: 5%;
+    transform: translateX(-50%) scale(0.95);
+    padding: 0.4rem 0.4rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+                linear-gradient(45deg, #c026d3, #3b82f6, #ec4899) border-box;
+    border: 1px solid transparent;
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: all 0.2s;
+    z-index: 10;
+    text-align: center;
+    width: 90%;
+    max-width: 200px;
+}
+
+.completion-percentage.visible {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+
+/* Course container */
+#coursesContainer {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    position: relative;
+}
+
+/* SVG connections */
+.connections-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 5;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+    #coursesContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .course-card {
+        max-width: 100%;
+    }
+} 
+
+/* Search container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#searchInput {
+    background-color: #262626;
+    color: #fff;
+    border: 1px solid #404040;
+    transition: all 0.2s;
+}
+
+#searchInput:focus {
+    border-color: #326CE5;
+    box-shadow: 0 0 0 2px rgba(50, 108, 229, 0.2);
+}
+
+#searchInput::placeholder {
+    color: #9ca3af;
+}
+
+/* Add this class for hiding non-matching topics */
+.topic-box.hidden {
+    display: none;
+} 
+
+/* Toast animations */
+.toast-enter {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+.toast-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.toast-exit {
+    opacity: 1;
+}
+
+.toast-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+} 
+
+/* Social Share Panel Styles */
+.social-share-panel {
+    position: fixed;
+    left: 20px;
+    top: 10%;
+    transform: translateX(-100px) translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, 
+                visibility 0.3s ease-in-out,
+                transform 0.5s ease-in-out;
+}
+
+.social-share-panel.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) translateY(-50%);
+}
+
+.share-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.share-button:hover {
+    transform: scale(1.1);
+}
+
+.share-button:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.twitter {
+    background-color: #000000;
+    outline: 1px solid #ffffff;
+}
+
+.bluesky {
+    background-color: #0560ff;
+} 
+
+/* Add these styles for the small share buttons in the toast */
+.share-button-small {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+
+.share-button-small.linkedin {
+    background-color: #0077b5;
+}
+
+.share-button-small.twitter {
+    background-color: #1DA1F2;
+}
+
+.share-button-small.bluesky {
+    background-color: #0560ff;
+} 
+
+/* Add animation for modal */
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-out {
+    animation: fade-out 0.3s ease-out forwards;
+}
+
+/* Ensure modal content is readable on mobile */
+@media (max-width: 768px) {
+    .social-share-panel {
+        display: none;
+    }
+} 
+
+/* Optimize path animations */
+path.connection-path {
+    transform: translate3d(0, 0, 0);
+    will-change: stroke-dashoffset;
+    vector-effect: non-scaling-stroke;
+} 
+
+/* Add these styles at the end of your styles.css file */
+#cohortToast {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#cohortToast:hover {
+    border-image: linear-gradient(45deg, #ec4899, #8b5cf6, #3b82f6) 1;
+    border-width: 1px;
+    border-style: solid;
+} 

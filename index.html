@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubestronaut Knowledge Graph</title>
+    <meta name="title" content="Kubestronaut Knowledge Graph">
+    <meta name="description"
+        content="The Kubestronaut Knowledge Graph is a tool that helps you understand the relationships between different topics in the Kubestronaut ecosystem.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kubestronaut.kodekloud.com/">
+    <meta property="og:title" content="Kubestronaut Knowledge Graph">
+    <meta property="og:description"
+        content="The Kubestronaut Knowledge Graph is a tool that helps you understand the relationships between different topics in the Kubestronaut ecosystem.">
+    <meta property="og:image" content="https://kubestronaut.kodekloud.com/assets/kubestronaut-knowledge-graph.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kubestronaut.kodekloud.com/">
+    <meta property="twitter:title" content="Kubestronaut Knowledge Graph">
+    <meta property="twitter:description"
+        content="The Kubestronaut Knowledge Graph is a tool that helps you understand the relationships between different topics in the Kubestronaut ecosystem.">
+    <meta property="twitter:image"
+        content="https://kubestronaut.kodekloud.com/assets/kubestronaut-knowledge-graph.jpeg">
+    <link rel="icon" type="image/svg+xml" href="assets/kubestronaut-stacked-color.svg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            950: '#0a0a0a',
+                            900: '#121212',
+                            800: '#1a1a1a',
+                            700: '#262626',
+                        },
+                        blue: {
+                            400: '#60a5fa',
+                            600: '#2563eb',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.0/flowbite.min.js"></script>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="cohortToast"
+        class="fixed top-4 right-4 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-blue-500/10 backdrop-blur-md border border-purple-200/20 text-white px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-3 hover:scale-105 transition-transform duration-200 hidden">
+        <svg class="w-6 h-6 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        <a href="https://leaderboard.kodekloud.com" target="_blank" class="text-sm font-medium">
+            Join the Kubestronaut 2025 Cohort
+            <span class="block text-xs text-purple-300">Click to view leaderboard →</span>
+        </a>
+    </div>
+    <div class="min-h-screen p-8">
+        <div class="container">
+            <h1 class="text-4xl font-bold text-white mb-8 text-center">
+                <span class="flex items-center justify-center gap-4"><img src="assets/kubestronaut-stacked-color.svg"
+                        alt="Kubestronaut Logo" class="h-16"><span
+                        class="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text">Kubestronaut
+                        Knowledge Graph</span></span>
+            </h1>
+
+            <div class="search-container mb-8">
+                <input type="text" id="searchInput" placeholder="Search topics..."
+                    class="w-full max-w-md mx-auto block px-4 py-2 rounded-lg bg-dark-700 text-white border border-dark-700 focus:border-blue-600 focus:outline-none">
+            </div>
+
+            <div id="coursesContainer">
+                <!-- Courses will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <template id="courseTemplate">
+        <div class="course-card">
+            <h2 class="course-title"></h2>
+            <div class="topics-container">
+                <!-- Topics will be dynamically inserted here -->
+            </div>
+        </div>
+    </template>
+    <!-- Footer -->
+    <div class="container mx-auto px-8 mt-auto">
+        <div class="flex justify-center items-center">
+            <p class="text-gray-400 text-base">
+                Made with ❤️ for the community by <a class="underline decoration-pink-500"
+                    href="https://kodekloud.com">KodeKloud</a>.
+            </p>
+        </div>
+    </div>
+    <script src="script.js?v=1737466771"></script>
+    <script src="userGuide.js"></script>
+    <!-- Persistent Info Note -->
+    <div id="infoNote"
+        class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-900/10 backdrop-blur-md border border-blue-200/20 text-white px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 max-w-2xl">
+        <svg class="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="text-sm">
+            Note: This is only a high-level map of topics covered between courses. The depth of knowledge required for
+            each topic may vary between courses.
+        </span>
+        <button onclick="closeInfoNote()" class="ml-auto hover:text-gray-200">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        function closeInfoNote() {
+            const note = document.getElementById('infoNote');
+            note.classList.add('opacity-0');
+            setTimeout(() => note.remove(), 300);
+        }
+    </script>
+</body>
+
+</html>
